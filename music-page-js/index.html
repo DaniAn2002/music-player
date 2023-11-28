@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music-website</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <main class="container background">
+
+        <div class="container-music">
+
+            <div class="container-img">
+
+                <img id="music-img" class="music-img" src="img/bg-1.webp" alt="">
+
+            </div>
+
+            <div class="container-contenido">
+                <img class="music-icon"
+                    src="https://res.cloudinary.com/doi7ukubm/image/upload/f_auto,q_auto/v1/js-kodigo-actividad/evckcui9n7zar9exguht"
+                    alt="">
+                <h1 id="song" class="song-name">Viva La Vida</h1>
+                <h2 id="artist" class="song-artist">Coldplay</h2>
+            </div>
+
+            <div class="container-reproductor">
+
+                <input type="range" value="20" min="0" class="player">
+
+                <audio class="player-audio" controls id="audio">
+                    <source src="./music/505.mp3" type="audio/mp3">
+                </audio>
+            </div>
+
+            <div class="buttons">
+                <button class="button-prev css-button-sliding-to-left--black button" id="prev-button"><img
+                        class="music-img"
+                        src="https://res.cloudinary.com/doi7ukubm/image/upload/f_auto,q_auto/v1/js-kodigo-actividad/xgb9cgmpgnvjsatydr85"
+                        alt=""></button>
+                <button class="button-next css-button-sliding-to-left--black button" id="audioPlay"><img
+                        class="music-img"
+                        src="https://res.cloudinary.com/doi7ukubm/image/upload/f_auto,q_auto/v1/js-kodigo-actividad/jc40pmhzorfcdaktel5g"
+                        alt=""></button>
+                <button class="button-next css-button-sliding-to-left--black button" id="next-button"><img
+                        class="music-img"
+                        src="https://res.cloudinary.com/doi7ukubm/image/upload/f_auto,q_auto/v1/js-kodigo-actividad/ytmwwxubh0agzvz9gia7"
+                        alt=""></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
