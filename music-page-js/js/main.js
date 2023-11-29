@@ -22,7 +22,32 @@ const musica = [
         artista: "Artic Monkeys",
         genero: "indie",
         img: "img/bg-4.jpeg"
+    },
+    {
+        cancion: "Reminder",
+        artista: "The Weeknd",
+        genero: "soul",
+        img: "img/bg-5.jpg"
+    },
+    {
+        cancion: "Into It",
+        artista: "Chase Atlantic",
+        genero: "independent",
+        img: "img/bg-6.jpeg"
+    },
+    {
+        cancion: "Reflections",
+        artista: "The Neighbourhood",
+        genero: "independent",
+        img: "img/bg-7.jpeg"
+    },
+    {
+        cancion: "Summertime Sadness",
+        artista: "Lana del Rey",
+        genero: "soul",
+        img: "img/bg-8.jpeg"
     }
+
 ]
 
 const audio = document.getElementById('audio')
@@ -51,7 +76,7 @@ document.getElementById('prev-button').addEventListener('click', (event) => {
     if (index <= musica.length - 1 && index !== 0) {
         index--
     } else if (index === 0) {
-        index = 3
+        index = 7
     }
     song.innerHTML = musica[index].cancion;
     artista.innerHTML = musica[index].artista;
