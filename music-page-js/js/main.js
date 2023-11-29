@@ -46,6 +46,18 @@ const musica = [
         artista: "Lana del Rey",
         genero: "soul",
         img: "img/bg-8.jpeg"
+    },
+    {
+        cancion: "Goosebumps",
+        artista: "Travis Scott",
+        genero: "soul",
+        img: "img/bg-9.jpeg"
+    },
+    {
+        cancion: "Moscow Mule",
+        artista: "Bad Bunny",
+        genero: "reggeaton",
+        img: "img/bg-10.jpeg"
     }
 
 ]
@@ -76,7 +88,7 @@ document.getElementById('prev-button').addEventListener('click', (event) => {
     if (index <= musica.length - 1 && index !== 0) {
         index--
     } else if (index === 0) {
-        index = 7
+        index = 9
     }
     song.innerHTML = musica[index].cancion;
     artista.innerHTML = musica[index].artista;
