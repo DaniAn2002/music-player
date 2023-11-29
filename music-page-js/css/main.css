@@ -19,6 +19,10 @@
     background-position: center center;
 }
 
+.pause-button{
+    visibility: hidden;
+}
+
 .container {
     font-family: 'Poppins', sans-serif;
     display: flex;
