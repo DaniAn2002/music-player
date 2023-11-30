@@ -63,6 +63,8 @@ const musica = [
 ]
 
 const audio = document.getElementById('audio')
+const playPause = document.getElementById('playPause')
+
 const cancion = document.getElementById('song')
 const artista = document.getElementById('artist')
 const img = document.getElementById('music-img')
@@ -96,13 +98,17 @@ document.getElementById('prev-button').addEventListener('click', (event) => {
 
 })
 
-document.getElementById('audioPlay').addEventListener('click', (event) => {
+playPause.addEventListener('click', (event) => {
     event.preventDefault()
 
     if (audio.paused || audio.ended) {
+        playPause.querySelector(".button-pause").classList.toggle("hide")
+        playPause.querySelector(".button-play").classList.toggle("hide")
         audio.play();
     } else {
         audio.pause();
+        playPause.querySelector(".button-pause").classList.toggle("hide")
+        playPause.querySelector(".button-play").classList.toggle("hide")
     }
 })
 
