@@ -19,9 +19,6 @@
     background-position: center center;
 }
 
-.pause-button{
-    visibility: hidden;
-}
 
 .container {
     font-family: 'Poppins', sans-serif;
@@ -161,4 +158,8 @@
     flex-direction: row;
     justify-content: space-evenly;
 
+}
+
+.hide{
+    display: none;
 }
