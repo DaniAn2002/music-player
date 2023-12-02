@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>music-website</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="#" />
 </head>
 
 <body>
@@ -28,12 +29,11 @@
             </div>
 
             <div class="container-reproductor">
-
-                <input type="range" value="20" min="0" class="player">
-
-                <audio class="player-audio" controls id="audio">
-                    <source src="./music/505.mp3" type="audio/mp3">
+                <audio controls id="audio">
+                    <source src="" type="audio/mpeg">
+                    
                 </audio>
+               
             </div>
 
             <div class="buttons">
@@ -42,27 +42,23 @@
                 <button class="button-prev css-button-sliding-to-left--black" id="prev-button"><img class="music-img"
                         src="https://res.cloudinary.com/doi7ukubm/image/upload/f_auto,q_auto/v1/js-kodigo-actividad/xgb9cgmpgnvjsatydr85"
                         alt=""></button>
-                <div id="playPause">
-
-
-                    <!-- //PAUSE BUTTON -->
-                    <button class="button-prev css-button-sliding-to-left--black button-pause hide"><img
-                            class="music-img"
-                            src="https://res.cloudinary.com/doi7ukubm/image/upload/f_auto,q_auto/v1/js-kodigo-actividad/oqhjbfhupog3hjvroegl"
-                            alt=""></button>
-
-                    <!-- //PLAY BUTTON -->
-                    <button class="button-next css-button-sliding-to-left--black button-play" id="playPause"><img
-                            class="music-img"
-                            src="https://res.cloudinary.com/doi7ukubm/image/upload/f_auto,q_auto/v1/js-kodigo-actividad/jc40pmhzorfcdaktel5g"
-                            alt=""></button>
-                </div>
-                <button class="button-next css-button-sliding-to-left--black" id="next-button"><img class="music-img"
+                <button class="button-next css-button-sliding-to-left--black button" id="audioPlay"><img
+                        class="music-img"
+                        src="https://res.cloudinary.com/doi7ukubm/image/upload/f_auto,q_auto/v1/js-kodigo-actividad/jc40pmhzorfcdaktel5g"
+                        alt=""></button>
+                <button class="button-next css-button-sliding-to-left--black button" id="next-button"><img
+                        class="music-img"
                         src="https://res.cloudinary.com/doi7ukubm/image/upload/f_auto,q_auto/v1/js-kodigo-actividad/ytmwwxubh0agzvz9gia7"
                         alt=""></button>
             </div>
         </div>
     </main>
+    <div hidden >
+        <audio id = "audio1" src="./music/1_Viva LaVida.mp3" type = "audio/mpeg"></audio>
+        <audio id = "audio2" src="./music/2_LoseYourself.mp3" type = "audio/mpeg"></audio>
+        <audio id = "audio3" src="./music/3_UnderPressure.mp3" type = "audio/mpeg"></audio>
+        <audio id = "audio4" src="./music/4_505.mp3" type = "audio/mpeg"></audio>
+    </div>
 
     <script src="./js/main.js"></script>
 

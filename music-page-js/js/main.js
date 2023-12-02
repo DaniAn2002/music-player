@@ -3,61 +3,29 @@ const musica = [
         cancion: "Viva la vida",
         artista: "Coldplay",
         genero: "pop",
-        img: "img/bg-1.webp"
+        img: "img/bg-1.webp",
+        audio: ""
     },
     {
         cancion: "Lose Yourself",
         artista: "Eminem",
         genero: "rap",
-        img: "img/bg-2.jpeg"
+        img: "img/bg-2.jpeg",
+        audio: ""
     },
     {
         cancion: "Under Pressure",
         artista: "Queen",
         genero: "rock",
-        img: "img/bg-3.jpeg"
+        img: "img/bg-3.jpeg",
+        audio: ""
     },
     {
         cancion: "505",
         artista: "Artic Monkeys",
         genero: "indie",
-        img: "img/bg-4.jpeg"
-    },
-    {
-        cancion: "Reminder",
-        artista: "The Weeknd",
-        genero: "soul",
-        img: "img/bg-5.jpg"
-    },
-    {
-        cancion: "Into It",
-        artista: "Chase Atlantic",
-        genero: "independent",
-        img: "img/bg-6.jpeg"
-    },
-    {
-        cancion: "Reflections",
-        artista: "The Neighbourhood",
-        genero: "independent",
-        img: "img/bg-7.jpeg"
-    },
-    {
-        cancion: "Summertime Sadness",
-        artista: "Lana del Rey",
-        genero: "soul",
-        img: "img/bg-8.jpeg"
-    },
-    {
-        cancion: "Goosebumps",
-        artista: "Travis Scott",
-        genero: "soul",
-        img: "img/bg-9.jpeg"
-    },
-    {
-        cancion: "Moscow Mule",
-        artista: "Bad Bunny",
-        genero: "reggeaton",
-        img: "img/bg-10.jpeg"
+        img: "img/bg-4.jpeg",
+        audio: ""
     }
 
 ]
@@ -71,6 +39,10 @@ const img = document.getElementById('music-img')
 
 let index = 0
 
+const playButton = document.getElementById("play-button");
+const pauseButton = document.getElementById("pause-button");
+
+
 document.getElementById('next-button').addEventListener('click', (event) => {
     event.preventDefault()
 
@@ -82,6 +54,7 @@ document.getElementById('next-button').addEventListener('click', (event) => {
     song.innerHTML = musica[index].cancion
     artista.innerHTML = musica[index].artista
     img.src = musica[index].img
+    document.getElementById('audio').src = musica[index].audio
 })
 
 document.getElementById('prev-button').addEventListener('click', (event) => {
@@ -95,21 +68,22 @@ document.getElementById('prev-button').addEventListener('click', (event) => {
     song.innerHTML = musica[index].cancion;
     artista.innerHTML = musica[index].artista;
     img.src = musica[index].img
+    document.getElementById('audio').src = musica[index].audio
 
 })
 
-playPause.addEventListener('click', (event) => {
-    event.preventDefault()
 
-    if (audio.paused || audio.ended) {
-        playPause.querySelector(".button-pause").classList.toggle("hide")
-        playPause.querySelector(".button-play").classList.toggle("hide")
-        audio.play();
-    } else {
-        audio.pause();
-        playPause.querySelector(".button-pause").classList.toggle("hide")
-        playPause.querySelector(".button-play").classList.toggle("hide")
-    }
-})
+document.addEventListener('DOMContentLoaded', () => {
+    //console.log('DOMContentLoaded OKOK')
+    musica.forEach((cancion,i) => {
+        let cont =i+1
+        musica[i].audio = document.getElementById('audio'+String(cont)).src
+       // console.log(musica[i])
+    })
+    document.getElementById('audio').src = musica[index].audio
+   // console.log(musica[index].audio)
+    
+
+  })
 
 
