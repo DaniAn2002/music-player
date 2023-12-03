@@ -31,37 +31,43 @@ const musica = [
         cancion: "Reminder",
         artista: "The Weeknd",
         genero: "soul",
-        img: "img/bg-5.jpg"
+        img: "img/bg-5.jpg",
+        audio: ""
     },
     {
         cancion: "Into It",
         artista: "Chase Atlantic",
         genero: "independent",
-        img: "img/bg-6.jpeg"
+        img: "img/bg-6.jpeg",
+        audio: ""
     },
     {
         cancion: "Reflections",
         artista: "The Neighbourhood",
         genero: "independent",
-        img: "img/bg-7.jpeg"
+        img: "img/bg-7.jpeg",
+        audio: ""
     },
     {
         cancion: "Summertime Sadness",
         artista: "Lana del Rey",
         genero: "soul",
-        img: "img/bg-8.jpeg"
+        img: "img/bg-8.jpeg",
+        audio: ""
     },
     {
         cancion: "Goosebumps",
         artista: "Travis Scott",
         genero: "soul",
-        img: "img/bg-9.jpeg"
+        img: "img/bg-9.jpeg",
+        audio: ""
     },
     {
         cancion: "Moscow Mule",
         artista: "Bad Bunny",
         genero: "reggeaton",
-        img: "img/bg-10.jpeg"
+        img: "img/bg-10.jpeg",
+        audio: ""
     }
 
 ]
