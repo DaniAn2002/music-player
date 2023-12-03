@@ -26,6 +26,42 @@ const musica = [
         genero: "indie",
         img: "img/bg-4.jpeg",
         audio: ""
+    },
+    {
+        cancion: "Reminder",
+        artista: "The Weeknd",
+        genero: "soul",
+        img: "img/bg-5.jpg"
+    },
+    {
+        cancion: "Into It",
+        artista: "Chase Atlantic",
+        genero: "independent",
+        img: "img/bg-6.jpeg"
+    },
+    {
+        cancion: "Reflections",
+        artista: "The Neighbourhood",
+        genero: "independent",
+        img: "img/bg-7.jpeg"
+    },
+    {
+        cancion: "Summertime Sadness",
+        artista: "Lana del Rey",
+        genero: "soul",
+        img: "img/bg-8.jpeg"
+    },
+    {
+        cancion: "Goosebumps",
+        artista: "Travis Scott",
+        genero: "soul",
+        img: "img/bg-9.jpeg"
+    },
+    {
+        cancion: "Moscow Mule",
+        artista: "Bad Bunny",
+        genero: "reggeaton",
+        img: "img/bg-10.jpeg"
     }
 
 ]
@@ -42,7 +78,7 @@ let index = 0
 const playButton = document.getElementById("play-button");
 const pauseButton = document.getElementById("pause-button");
 
-
+//The next button plays the next song accordingly to the array of objects.
 document.getElementById('next-button').addEventListener('click', (event) => {
     event.preventDefault()
 
@@ -57,6 +93,8 @@ document.getElementById('next-button').addEventListener('click', (event) => {
     document.getElementById('audio').src = musica[index].audio
 })
 
+//The previous button (in case pressed) plays the previous songs accordingly to the array of objects
+//if the position of the index is 0 the previous song is number 9.
 document.getElementById('prev-button').addEventListener('click', (event) => {
     event.preventDefault()
 
@@ -72,18 +110,14 @@ document.getElementById('prev-button').addEventListener('click', (event) => {
 
 })
 
-
+//When selected either next or previous song the song is able to be played
 document.addEventListener('DOMContentLoaded', () => {
-    //console.log('DOMContentLoaded OKOK')
     musica.forEach((cancion,i) => {
         let cont =i+1
         musica[i].audio = document.getElementById('audio'+String(cont)).src
-       // console.log(musica[i])
     })
     document.getElementById('audio').src = musica[index].audio
-   // console.log(musica[index].audio)
     
-
   })
 
 

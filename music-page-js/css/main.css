@@ -158,9 +158,9 @@
 
 .buttons {
     display: flex;
-    margin-top: -15px;
+    margin: -32px 25px 0;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content:space-between;
 
 }
 
